@@ -20,5 +20,7 @@ function login() {
       "Content-Type": "applcation/json",
     },
     body: JSON.stringify(req),
-  });
+  })
+    .then((res) => res.json())
+    .then((res) => {});
 }
