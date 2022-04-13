@@ -9,5 +9,13 @@ function login() {
     id: id.value,
     psword: psword.value,
   };
-  console.log(req);
+
+  console.log(req, JSON.stringify(req));
+
+  fetch("/login", {
+      headers: {
+          "Content-type":"applcation/json"
+      }
+    body: JSON.stringify(req),
+  });
 }
