@@ -32,7 +32,7 @@ const process = {
 
 const users = {
   id: ["ssyy", "개발자", "김팀장"],
-  psword: ["1234", "1234", "123456"],
+  psword: ["ssyy", "1234", "123456"],
 };
 
 module.exports = {
