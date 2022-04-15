@@ -2,7 +2,7 @@
 
 class UserStorage {
   static #users = {
-    id: ["오종진", "개발자", "김팀장"],
+    id: ["ssyy", "개발자", "김팀장"],
     psword: ["1111", "1234", "123456"],
     name: ["dd", "ss", "ff"],
   };
@@ -23,9 +23,10 @@ class UserStorage {
     const idx = users.id.indexOf(id);
     const usersKeys = Object.keys(users);
     const userInfo = usersKeys.reduce((newUsers, info) => {
-      newUsers[info] = info[idx];
+      newUsers[info] = users[info][idx];
       return newUsers;
     }, {});
+    console.log(userInfo);
     return userInfo;
   }
 }

@@ -4,7 +4,7 @@ const User = require("../../models/User");
 
 const output = {
   home: (req, res) => {
-    res.render("index");
+    res.render("home/index");
   },
 
   login: (req, res) => {
@@ -14,6 +14,7 @@ const output = {
 
 const process = {
   login: (req, res) => {
+    console.log(req.body);
     const user = new User(req.body);
     const response = user.login();
     return res.json(response);
