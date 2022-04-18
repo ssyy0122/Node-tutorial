@@ -1,5 +1,6 @@
 "use strict";
 
+const res = require("express/lib/response");
 const User = require("../../models/User");
 
 const output = {
@@ -9,6 +10,9 @@ const output = {
 
   login: (req, res) => {
     res.render("home/login");
+  },
+  register: (req, res) => {
+    res.render("home/register");
   },
 };
 
